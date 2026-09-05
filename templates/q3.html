@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>AI Car Price Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function saveAnswer(choice) {
+        // Retrieve existing answers or start a new array
+        let currentAnswers = JSON.parse(localStorage.getItem('userAnswers')) || [];
+        
+        // Add the new choice
+        currentAnswers.push(choice);
+        
+        // Save back to localStorage
+        localStorage.setItem('userAnswers', JSON.stringify(currentAnswers));
+        
+        console.log("Updated Answers:", currentAnswers);
+  }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <img id="logo" src="img/logo.png" alt="Logo" height="150">
+        <nav>
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Services</li></a>
+                <a href="#"><li>Blog</li></a>
+                <a href="#"><li>Premium</li></a>
+                <a href="#"><li>Contact Us</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="body">
+        <img id='assistant' src="img/assistant.png" height="400" alt="AI assistant">
+        <div class="message">
+            <h1>Your City?</h1>
+        </div>
+        <div class='options'>
+            <ul>
+                <a href="result.html"><button onclick="saveAnswer('Maruti')"><li>Bangalore</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Hyundai')"><li>New Delhi</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Tata')"><li>Mumbai</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Mahindra')"><li>Noida</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('BMW')"><li>Gurugram</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Mercedes')"><li>Faridabad</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Tata')"><li>Sonipat</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Mahindra')"><li>Haryana</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('BMW')"><li>Punjab</li></a></button>
+                <a href="result.html"><button onclick="saveAnswer('Mercedes')"><li>Hydrabad</li></a></button>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

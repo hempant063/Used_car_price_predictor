@@ -1,0 +1,111 @@
+body{
+    background-image: url("img/background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+}
+
+#assistant {
+    padding-left:850;
+    margin-top:200px;
+    position:absolute;
+}
+
+#logo {
+    position:absolute;
+    margin-top: -8px;
+    margin-left:20px;
+    border-radius:35px;
+}
+
+.navbar ul {
+    list-style: none;
+    display:flex;
+    justify-content: flex-end;
+    
+}
+
+ul {
+    list-style: none;
+    
+}
+
+.navbar li {
+    background-color: blue;
+    padding:15px;
+    margin:10px;
+    border-radius: 20px;
+    color:white;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family:sans-serif;
+    text-decoration: none;
+    transition: 0.5s
+}
+.navbar li:hover {
+    transition: 0.5s;
+    background-color: rgb(8, 2, 93);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.navbar {
+    background-color: aliceblue;
+    border-radius: 20px;
+    position: sticky;
+    margin-top: 15px;
+    box-shadow:-9px 0px 20px 0.5px rgba(0, 0, 0, 0.491);
+}
+
+.message {
+    background-color: rgb(166, 196, 247);
+    padding:70px;
+    width: 400px;
+    margin: 120px;
+    margin-left:300px;
+    position:absolute;
+    border-radius:20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.start button {
+    background-color: rgb(166, 196, 247);
+    padding:20px;
+    margin: 420px;
+    margin-left:530px;
+    position:absolute;
+    border-radius:20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:X-large;
+    font-weight: bold;
+}
+
+.options{
+    margin-top:380px;
+    margin-left:340px;
+    width:500px;
+    align-items: center;
+    position:absolute;
+}
+
+button {
+    background-color: rgb(166, 196, 247);
+    padding:20px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:X-large;
+    font-weight: bold;
+}
+
+
+button:hover {
+    transition: 0.5s;
+    background-color: rgb(139, 143, 248);
+}
