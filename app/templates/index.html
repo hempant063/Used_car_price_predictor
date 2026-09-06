@@ -1,7 +1,6 @@
 <html>
 <head>
     <title>AI Car Price Predictor</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar">
@@ -19,17 +18,21 @@
     </div>
 
     <div class="body">
-        <img id='assistant' src="img/assistant.png" height="400" alt="AI assistant">
+        <!-- <img id='assistant' src="img/assistant.png" height="400" alt="AI assistant"> -->
         <div class="message">
-            <h1>Start predicting?</h1>
+            <h1>Start Predicting</h1>
         </div>
         <div class="start">
-            <form action="121.0.0.1:8000/predict" method="post">
+            <form action="/predict" method="post">
                 <input type="text" name="company">
-                <input type="number" name="year">
+                <input type="number" name="age">
                 <button type="submit">Start</button>
             </form>
         </div>
+    </div>
+    <div class="answer">
+        <h1>Company of your car is {{company}}</h1>
+        <h1>Age of your car is {{age}}</h1>
     </div>
 </body>
 </html>
