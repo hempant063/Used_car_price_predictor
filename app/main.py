@@ -1,6 +1,9 @@
 from fastapi import FastAPI,Request
 from fastapi.templating import Jinja2Templates
 from fastapi import Form
+import joblib
+import pandas as pd
+
 
 app=FastAPI()
 
@@ -18,14 +21,32 @@ def index(request:Request):
 
 @app.post('/predict')
 def prediction(request:Request,
-               company:str=Form(...),
-               age:int=Form(...)):
+               brand:str=Form(...),
+               model:str=Form(...),
+               model_year:int=Form(...),
+               milage:int=Form(...),
+               fuel_type:str=Form(...),
+               clean_title:str=Form(...),
+               accident:int=Form(...),):
+    #predicting the data using MLpipeline
+    pipeline=joblib.load('pipeline.pkl')
+    df=pd.DataFrame({
+        'brand':[brand],
+        'model':[model],
+        'model_year':[model_year],
+        'milage':[milage],
+        'fuel_type':[fuel_type],
+        'clean_title':[clean_title],
+        'accident':[accident]
+    })
+    prediction=pipeline.predict(df)
+
     return templates.TemplateResponse(
         request=request,
         name='index.html',
         context={
-            'company':company,
-            'age':age
+            'name':'Hans',
+            'price':round(prediction[0],2)
         }
     )
 
