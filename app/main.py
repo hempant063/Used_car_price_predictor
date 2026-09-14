@@ -1,32 +1,31 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+from fastapi import FastAPI,Request
 from fastapi.templating import Jinja2Templates
-from fastapi import Request
 from fastapi import Form
-
-
-templates=Jinja2Templates(directory='app/templates')
 
 app=FastAPI()
 
+templates=Jinja2Templates(directory='app/templates')
+
 @app.get('/')
-def home(request:Request):
+def index(request:Request):
     return templates.TemplateResponse(
         request=request,
         name='index.html',
         context={
-            'page':'Home'
+            'name':'Hans'
         }
     )
 
-
 @app.post('/predict')
-def prediction(request:Request,company:str=Form(...),age:int=Form(...)):
+def prediction(request:Request,
+               company:str=Form(...),
+               age:int=Form(...)):
     return templates.TemplateResponse(
         request=request,
         name='index.html',
         context={
             'company':company,
-            'age':age,
+            'age':age
         }
     )
+

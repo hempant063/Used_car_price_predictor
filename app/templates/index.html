@@ -1,38 +1,24 @@
 <html>
-<head>
-    <title>AI Car Price Predictor</title>
-</head>
-<body>
-    <div class="navbar">
-        <!-- <img id="logo" src="img/logo.png" alt="Logo" height="150"> -->
-        <nav>
-            <ul>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Services</li></a>
-                <a href="#"><li>Blog</li></a>
-                <a href="#"><li>Premium</li></a>
-                <a href="#"><li>Contact Us</li></a>
-            </ul>
-        </nav>
-    </div>
+    <head>
+        <title>AI Website</title>
+    </head>
+    <body>
+        <h1>Hello {{name}}</h1>
+        <h2>Enter your car info:</h2>
+        <form action="/predict" method="post">
+            <label>Enter your car's company:</label><br>
+            <input type="text" name="company">
+            <br> 
+            <label>Enter your car's age:</label><br>
+            <input type="number" name="age">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
 
-    <div class="body">
-        <!-- <img id='assistant' src="img/assistant.png" height="400" alt="AI assistant"> -->
-        <div class="message">
-            <h1>Start Predicting</h1>
+        <div class="Result">
+            {%if company%}
+            <h2>Your car's company is {{company}} and age is {{age}}</h2>
+            {%endif%}
         </div>
-        <div class="start">
-            <form action="/predict" method="post">
-                <input type="text" name="company">
-                <input type="number" name="age">
-                <button type="submit">Start</button>
-            </form>
-        </div>
-    </div>
-    <div class="answer">
-        <h1>Company of your car is {{company}}</h1>
-        <h1>Age of your car is {{age}}</h1>
-    </div>
-</body>
+    </body>
 </html>
