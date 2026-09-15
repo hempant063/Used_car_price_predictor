@@ -3,12 +3,19 @@ from fastapi.templating import Jinja2Templates
 from fastapi import Form
 import joblib
 import pandas as pd
+from fastapi.staticfiles import StaticFiles
 
 
 app=FastAPI()
 
+static=StaticFiles(directory='app/static')
 templates=Jinja2Templates(directory='app/templates')
 
+app.mount(
+    path="/static",
+    app=static,
+    name="static",
+)
 @app.get('/')
 def index(request:Request):
     return templates.TemplateResponse(
@@ -49,4 +56,5 @@ def prediction(request:Request,
             'price':round(prediction[0],2)
         }
     )
+
 

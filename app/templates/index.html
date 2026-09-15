@@ -1,11 +1,11 @@
 <html>
 <head>
     <title>AI Car Price Predictor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href='{{ url_for("static",path="style.css")}} '>
 </head>
 <body>
     <div class="navbar">
-        <!-- <img id="logo" src="img/logo.png" alt="Logo" height="150"> -->
+        <img id="logo" src="{{url_for('static',path='img/img/logo.png')}}" alt="Logo" height="150"> 
         <nav>
             <ul>
                 <a href="#"><li>Home</li></a>
@@ -19,12 +19,10 @@
     </div>
 
     <div class="body">
-        <img id='assistant' src="img/assistant.png" height="400" alt="AI assistant">
-        <div class="message">
-            <h1>Start predicting?</h1>
-        </div>
+        <img id='assistant' src="{{url_for('static',path='img/img/assistant.png')}}" height="400" alt="AI assistant">
         <div class="start">
             <form action="/predict" method="post">
+                <h2>Car Details:</h2>
                 <label>Enter your car's brand:</label><br>
                 <input type="text" name="brand" placeholder="Ford" autofocus>
                 <br> 

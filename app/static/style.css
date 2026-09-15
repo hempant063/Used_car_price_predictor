@@ -4,11 +4,17 @@ body{
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position: center;
+    
+}
+
+.body{
+    justify-items: center;
+    padding-top: 40px;
 }
 
 #assistant {
-    padding-left:850;
-    margin-top:200px;
+    padding-left:650px;
+    margin-top:160px;
     position:absolute;
 }
 
@@ -62,29 +68,23 @@ a {
     box-shadow:-9px 0px 20px 0.5px rgba(0, 0, 0, 0.491);
 }
 
-.message {
-    background-color: rgb(166, 196, 247);
-    padding:70px;
-    width: 400px;
-    margin: 120px;
-    margin-left:300px;
-    position:absolute;
-    border-radius:20px;
-    text-align: center;
-    font-family: sans-serif;
+
+.start{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+    justify-items: center;
 }
 
 .start button {
     background-color: rgb(166, 196, 247);
-    padding:20px;
-    margin: 420px;
-    margin-left:530px;
-    position:absolute;
     border-radius:20px;
     text-align: center;
     font-family: sans-serif;
     font-size:X-large;
     font-weight: bold;
+    margin: 20px;
 }
 
 .options{
@@ -97,8 +97,6 @@ a {
 
 button {
     background-color: rgb(166, 196, 247);
-    padding:20px;
-    text-align: center;
     font-family: sans-serif;
     font-size:X-large;
     font-weight: bold;
