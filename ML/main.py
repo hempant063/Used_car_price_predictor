@@ -142,9 +142,10 @@ if __name__=="__main__":
     if is_pkl_not_there:
         try:
             df=pd.read_csv('dataset/used_cars.csv')
-            st.success('File loaded successfully')
+            # st.success('File loaded successfully')
         except:
-            st.error('File not found')
+            print("File not found")
+            # st.error('File not found')
         #Cleaning the data using pandas to feed to the model
         df['milage']=df['milage'].str.replace(',','').str.replace('mi.','').astype(int)
         df['price']=df['price'].str.replace('$','').str.replace(',','').astype(int)
