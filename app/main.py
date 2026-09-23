@@ -26,6 +26,15 @@ def index(request:Request):
         }
     )
 
+@app.get('/prediction')
+def predict(request:Request):
+    return templates.TemplateResponse(
+        request=request,
+        name='predict.html',
+        
+    )
+
+
 @app.post('/predict')
 def prediction(request:Request,
                brand:str=Form(...),
@@ -50,9 +59,8 @@ def prediction(request:Request,
 
     return templates.TemplateResponse(
         request=request,
-        name='index.html',
+        name='result.html',
         context={
-            'name':'Hans',
             'price':round(prediction[0],2)
         }
     )

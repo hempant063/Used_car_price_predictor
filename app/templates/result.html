@@ -8,7 +8,7 @@
         <img id="logo" src="{{url_for('static',path='img/img/logo.png')}}" alt="Logo" height="70"> 
         <nav>
             <ul>
-                <a href="#"><li>Home</li></a>
+                <a href="/"><li>Home</li></a>
                 <a href="/prediction"><li>Predict</li></a>
                 <a href="#"><li>Blog</li></a>
                 <a href="#"><li>Contact Us</li></a>
@@ -18,11 +18,13 @@
 
     <div class="body">
         <img id='assistant' src="{{url_for('static',path='img/img/assistant.png')}}" height="400" alt="AI assistant">
-        <div class="welcome">
-            <h2 >What's your car worth?</h2>
-            <h4>Get an AI-powered estimate of your used car's price</h4>
-            <a href="/prediction"><button>Start</button></a>
 
+            <div class="Result">
+                {%if price%}
+                <h2>Your car's price is USD$ {{price}}</h2>
+                {%endif%}
+                <a href="/prediction"><button>Predict Again?</button></a>
+            </div>
         </div>
     </div>
 </body>

@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>AI Car Price Predictor</title>
+    <link rel="stylesheet" href='{{ url_for("static",path="style.css")}} '>
+</head>
+<body>
+    <div class="navbar">
+        <img id="logo" src="{{url_for('static',path='img/img/logo.png')}}" alt="Logo" height="70"> 
+        <nav>
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="#"><li>Predict</li></a>
+                <a href="#"><li>Blog</li></a>
+                <a href="#"><li>Contact Us</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="body">
+        <img id='assistant' src="{{url_for('static',path='img/img/assistant.png')}}" height="400" alt="AI assistant">
+        <div class="start">
+            <form action="/predict" method="post">
+                <h2>Enter Car Details:</h2>
+                <div class="form-grid">
+                <div class="labels">
+                <input type="text" name="brand" placeholder="Brand Name" autofocus>
+                </div>
+                <div class="labels">
+                <input type="text" name="model" placeholder="Model Name">
+                </div>
+                <div class="labels">
+                <input type="number" name="model_year" placeholder="Model Year">
+                </div>
+                <div class="labels">
+                <input type="number" name="milage" placeholder="Milage">
+                </div>
+                <div class="labels">
+                <input type="text" name="fuel_type" placeholder="Fuel Type">
+                </div>
+                <div class="labels">
+                <input type="text" name="clean_title" placeholder="Is Clean?">
+                </div>
+                <div class="labels">
+                <input type="number" name="accident" placeholder="No of Accidents">
+                </div>
+            </div>
+                <button type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

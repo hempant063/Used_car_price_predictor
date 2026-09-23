@@ -1,10 +1,13 @@
 body{
-    background-image: url("img/background_image.jpg");
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.571)),
+    url("img/background_image.jpg");
+    background-color: rgba(13, 31, 47, 0.332);;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position: center;
-    
+    overflow: hidden;
 }
 
 .body{
@@ -12,15 +15,34 @@ body{
     padding-top: 40px;
 }
 
+h2{
+    color:rgb(49, 118, 246);
+    font-weight: bolder;
+    font-size: 30px;
+    font-family:sans-serif;
+}
+h4{
+    color:rgb(49, 118, 246);
+    font-weight: bolder;
+    font-size: 15px;
+    font-family:sans-serif;
+}
+
+.form-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+
 #assistant {
-    padding-left:650px;
-    margin-top:160px;
+    padding-left:640px;
+    margin-top:110px;
     position:absolute;
 }
 
 #logo {
     position:absolute;
-    margin-top: -8px;
+    margin-top: 1px;
     margin-left:20px;
     border-radius:35px;
 }
@@ -38,10 +60,11 @@ ul {
 }
 
 .navbar li {
-    background-color: blue;
+    background-color: rgb(13, 31, 47);;
     padding:15px;
     margin:10px;
     border-radius: 20px;
+    border:0.5px solid rgba(54, 146, 251, 0.962);
     color:white;
     font-weight: bolder;
     font-size: 20px;
@@ -51,8 +74,25 @@ ul {
 }
 .navbar li:hover {
     transition: 0.5s;
-    background-color: rgb(8, 2, 93);
+    background-color: rgb(13, 31, 47);
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
+    
+}
 
+input{
+    border-radius:10px;
+    padding:8px;
+    position: relative;
+    z-index: 10;
+    background-color: rgb(46, 56, 63);
+    transition: 0.5s;
+    border: none;
+    color: aliceblue;
+}
+
+input:hover{
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
+    transition: 0.5s;
 }
 
 a {
@@ -61,30 +101,62 @@ a {
 
 
 .navbar {
-    background-color: aliceblue;
+    background-color: rgb(13, 31, 47);
     border-radius: 20px;
     position: sticky;
     margin-top: 15px;
-    box-shadow:-9px 0px 20px 0.5px rgba(0, 0, 0, 0.491);
+    box-shadow:0px 0px 5px 0.05px rgba(54, 146, 251, 0.626);
 }
 
 
 .start{
-    background-color: aliceblue;
+    background-color: rgb(13, 31, 47);;
     padding: 20px;
     border-radius: 20px;
-    width: 200px;
+    width: 450px;
     justify-items: center;
+    text-align: center;
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
+}
+
+.welcome{
+    background-color: rgb(13, 31, 47);;
+    padding: 20px;
+    border-radius: 20px;
+    width: 450px;
+    justify-items: center;
+    text-align: center;
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
 }
 
 .start button {
-    background-color: rgb(166, 196, 247);
-    border-radius:20px;
+    background-color: rgb(5, 101, 185);
+    border-radius:10px;
     text-align: center;
     font-family: sans-serif;
     font-size:X-large;
     font-weight: bold;
-    margin: 20px;
+    margin: 50px;
+    margin-left: 150px;
+    border:none;
+    position: relative;
+    z-index: 10;
+    color:rgb(190, 223, 252);
+}
+
+.welcome button {
+    background-color: rgb(5, 101, 185);
+    border-radius:10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:X-large;
+    font-weight: bold;
+    margin: 50px;
+    border:none;
+    position: relative;
+    z-index: 10;
+    color:rgb(190, 223, 252);
+
 }
 
 .options{
@@ -105,5 +177,32 @@ button {
 
 button:hover {
     transition: 0.5s;
-    background-color: rgb(139, 143, 248);
+    background-color: rgb(5, 101, 185);
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
+
+}
+
+.Result{
+    background-color: rgb(13, 31, 47);;
+    padding: 20px;
+    border-radius: 20px;
+    width: 450px;
+    justify-items: center;
+    box-shadow:0px 0px 10px 0.25px rgba(54, 146, 251, 0.962);
+}
+
+.Result button {
+    background-color: rgb(5, 101, 185);
+    border-radius:10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size:X-large;
+    font-weight: bold;
+    margin: 50px;
+    margin-left: 150px;
+    border:none;
+    position: relative;
+    z-index: 10;
+    color:rgb(190, 223, 252);
+    
 }
